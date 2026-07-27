@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float r;
+    const float PI = 3.14;
+
+    cout << "Enter radius: ";
+    cin >> r;
+
+    cout << "Area = " << PI * r * r << endl;
+    cout << "Circumference = " << 2 * PI * r;
+
+    return 0;
+}
