@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class Shape
+{
+public:
+    virtual void area()
+    {
+        cout << "Area of Shape";
+    }
+};
+
+class Rectangle : public Shape
+{
+    int l, b;
+
+public:
+    void area() override
+    {
+        l = 10;
+        b = 5;
+        cout << "Area of Rectangle = " << l * b << endl;
+    }
+};
+
+class Square : public Shape
+{
+    int s;
+
+public:
+    void area() override
+    {
+        s = 4;
+        cout << "Area of Square = " << s * s << endl;
+    }
+};
+
+int main()
+{
+    Shape *p;
+    Rectangle r;
+    Square s;
+
+    p = &r;
+    p->area();
+
+    p = &s;
+    p->area();
+
+    return 0;
+}
